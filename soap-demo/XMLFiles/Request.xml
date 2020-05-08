@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GetEmployeeDetailsReq xmlns="http://javaspringdemo.com/employees"
+                       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                       xsi:schemaLocation="http://javaspringdemo.com/employees employee-details.xsd">
+    <id>123</id>
+</GetEmployeeDetailsReq>

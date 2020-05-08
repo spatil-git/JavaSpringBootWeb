@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://javaspringdemo.com/employees"
+        xmlns:tns="http://javaspringdemo.com/employees"
+        elementFormDefault="qualified">
+    <xs:element name="GetEmployeeDetailsReq">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:integer"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetEmployeeDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                    <xs:element name="EmployeeDetails" type="tns:EmployeeDetails"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetAllEmployeeDetailsReq">
+        <xs:complexType>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="GetAllEmployeeDetailsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="EmployeeDetails" type="tns:EmployeeDetails" maxOccurs="unbounded"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <!-- Defining the Complex Type for reuse later.-->
+    <xs:complexType name="EmployeeDetails">
+        <xs:sequence>
+            <xs:element name="id" type="xs:integer"></xs:element>
+            <xs:element name="firstName" type="xs:string"></xs:element>
+            <xs:element name="lastName" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
